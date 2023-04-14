@@ -7,10 +7,135 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  i-card
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card >
+      <ion-item class="ion-text-right padding-item" color="dark">
+        <ion-input [value]="valorInicial" fill="solid" readonly></ion-input>
+      </ion-item>
+      <ion-grid class="padding-grid">
+        <ion-row>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="apagarTudo()" expand="block" shape="round" color="dark">
+              AC
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir('(')" expand="block" shape="round">
+              (
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(')')" expand="block" shape="round">
+              )
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir('/')" expand="block" shape="round">
+              /
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(7)" expand="block" shape="round">
+              7
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(8)" expand="block" shape="round">
+              8
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(9)" expand="block" shape="round">
+              9
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir('*')" expand="block" shape="round">
+              x
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(4)" expand="block" shape="round">
+              4
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(5)" expand="block" shape="round">
+              5
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(6)" expand="block" shape="round">
+              6
+            </ion-button>
+          </ion-col>
+            <ion-col  size="1" offset="1" >
+              <ion-button (click)="inserir('-')" expand="block" shape="round">
+                -
+              </ion-button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(1)" expand="block" shape="round" value="meuvalor">
+              1
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(2)" expand="block" shape="round">
+              2
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(3)" expand="block" shape="round">
+              3
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir('+')" expand="block" shape="round" color="danger">
+              +
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir(0)" expand="block" shape="round">
+              0
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="inserir('.')" expand="block" shape="round">
+              .
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="apagarAEsquerda()" expand="block" shape="round" color="dark">
+              C
+            </ion-button>
+          </ion-col>
+          <ion-col  size="1" offset="1" >
+            <ion-button (click)="calcular()" expand="block" shape="round" color="success">
+              =
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>v1.0.0</ion-title>
+  </ion-toolbar>
+</ion-footer>
